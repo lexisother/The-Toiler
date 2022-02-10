@@ -17,10 +17,13 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', 'HomeController@index')->name('home');
 
 // Register the authentication routes, this is managed by `artisan ui react --auth`
-Auth::routes();
+Auth::routes(['register' => false]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
+Route::prefix('/source')->group(function () {
+    Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/dump', 'SourceController@dump')->name('dump');
+    Route::get('/aly', 'SourceController@aly')->name('aly');
+});
