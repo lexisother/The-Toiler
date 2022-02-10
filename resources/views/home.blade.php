@@ -11,10 +11,13 @@
                     <div class="container">
                         <div class="row">
                             <a href="{{ route('dump') }}" class="col text-center">
-                            Dump
+                                Dump
+                            </a>
+                            <a href="{{ route('edge') }}" class="col text-center">
+                                Edge
                             </a>
                             <a href="{{ route('aly') }}" class="col text-center">
-                            Aly
+                                Aly
                             </a>
                         </div>
                     </div>

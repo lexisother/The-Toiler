@@ -25,5 +25,6 @@ Route::prefix('/source')->group(function () {
     Route::get('/', 'HomeController@index')->name('home');
 
     Route::get('/dump', 'SourceController@dump')->name('dump');
+    Route::get('/edge', 'SourceController@edge')->name('edge');
     Route::get('/aly', 'SourceController@aly')->name('aly');
 });

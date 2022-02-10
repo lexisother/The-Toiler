@@ -13,6 +13,12 @@ class SourceController extends Controller
         return view('source', ['sourceData' => $res]);
     }
 
+    public function edge()
+    {
+        $res = $this->getSourceData('https://moltencoredev.github.io/edgecord/plugins-large.json');
+        return view('source', ['sourceData' => $res]);
+    }
+
     public function aly()
     {
         return view('source', ['sourceData' => null]);
