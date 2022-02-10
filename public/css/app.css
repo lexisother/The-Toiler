@@ -11735,6 +11735,28 @@ template {
   display: none;
 }
 
+.dataentry-content {
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+.dataentry-main {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  min-width: 380px;
+  max-width: 1000px;
+  margin: 8px;
+}
+
+@media screen and (max-width: 839px) {
+  .dataentry-main {
+    min-width: 310px;
+    width: 100%;
+    margin: 8px;
+  }
+}
 @media (prefers-color-scheme: light) {
   body {
     background-color: #ffffff !important;
