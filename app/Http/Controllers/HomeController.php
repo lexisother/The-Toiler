@@ -13,7 +13,9 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // We don't need to block the home-page for guests, as this will house
+        // the plugin page.
+        // $this->middleware('auth');
     }
 
     /**
